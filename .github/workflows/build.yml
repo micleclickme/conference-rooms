@@ -44,6 +44,16 @@ jobs:
           echo "uuid=$UUID" >> "$GITHUB_OUTPUT"
           echo "zip=$ZIP" >> "$GITHUB_OUTPUT"
 
+      - name: Set up Python for shexli
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run shexli static analyzer
+        run: |
+          pip install -U shexli
+          shexli "${{ steps.artifact.outputs.zip }}"
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v5
         with:

@@ -44,7 +44,8 @@ pack: all
 	rm -f $(UUID).shell-extension.zip
 	cd . && zip -r $(UUID).shell-extension.zip \
 		metadata.json extension.js prefs.js stylesheet.css \
-		lib schemas icons locale
+		lib schemas icons locale \
+		-x 'schemas/gschemas.compiled'
 
 clean:
 	rm -f schemas/gschemas.compiled
