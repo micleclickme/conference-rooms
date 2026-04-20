@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="conference-rooms">
+  <schema id="org.gnome.shell.extensions.conference-rooms"
+          path="/org/gnome/shell/extensions/conference-rooms/">
+    <key name="rooms" type="as">
+      <default>[]</default>
+      <summary>Configured conference rooms</summary>
+      <description>Each element is a JSON object {id, name, url, hotkey}. Order is display order.</description>
+    </key>
+    <key name="open-command" type="s">
+      <default>'xdg-open %U'</default>
+      <summary>Command template for opening a room</summary>
+      <description>%U is replaced with the URL. If %U is absent, URL is appended as the last argument.</description>
+    </key>
+    <key name="popup-hotkey" type="as">
+      <default><![CDATA[['<Super>m']]]></default>
+      <summary>Hotkey to toggle the popup menu</summary>
+    </key>
+    <key name="schema-version" type="i">
+      <default>1</default>
+      <summary>Reserved for future migrations</summary>
+    </key>
+  </schema>
+</schemalist>
