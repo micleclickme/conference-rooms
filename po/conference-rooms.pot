@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conference Rooms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-20 15:40+0300\n"
+"POT-Creation-Date: 2026-04-20 16:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/launcher.js:32
+#: lib/launcher.js:29
 #, javascript-format
 msgid "Invalid URL for \"%s\": %s"
 msgstr ""
 
-#: lib/launcher.js:54
+#: lib/launcher.js:51
 #, javascript-format
 msgid "Failed to open \"%s\": %s"
+msgstr ""
+
+#: lib/rooms.js:24
+msgid "URL is empty"
+msgstr ""
+
+#: lib/rooms.js:29
+msgid "Malformed URL"
+msgstr ""
+
+#: lib/rooms.js:33
+msgid "Only http(s) URLs are supported"
+msgstr ""
+
+#: lib/rooms.js:35
+msgid "URL has no host"
 msgstr ""
 
 #: lib/indicator.js:44
@@ -35,11 +51,11 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: lib/hotkeys.js:54
+#: lib/hotkeys.js:52
 msgid "Toggle popup"
 msgstr ""
 
-#: lib/hotkeys.js:99
+#: lib/hotkeys.js:97
 #, javascript-format
 msgid "Hotkey %s already in use — \"%s\""
 msgstr ""

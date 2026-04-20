@@ -69,4 +69,4 @@ The `Build` workflow (`.github/workflows/build.yml`) runs tests, builds the EGO-
 
 ## License
 
-GPL-3.0-or-later
+GPL-2.0-or-later. See `COPYING`.

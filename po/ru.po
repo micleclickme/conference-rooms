@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conference Rooms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-20 15:18+0300\n"
+"POT-Creation-Date: 2026-04-20 16:03+0300\n"
 "PO-Revision-Date: 2026-04-20 15:18+0300\n"
 "Last-Translator: mdanuschenkov@localrent.com\n"
 "Language-Team: Russian\n"
@@ -14,124 +14,170 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-msgid "No rooms configured. Click to open preferences."
-msgstr "Комнаты не настроены. Откройте настройки."
-
-msgid "Preferences"
-msgstr "Настройки"
-
-msgid "Toggle popup"
-msgstr "Открытие меню"
-
-msgid "Disabled"
-msgstr "Отключено"
-
-msgid "Press a shortcut"
-msgstr "Нажмите сочетание"
-
-msgid "Press keys… Esc to clear, Backspace to cancel"
-msgstr "Нажмите клавиши… Esc — очистить, Backspace — отмена"
-
-msgid "General"
-msgstr "Общие"
-
-msgid "Open command (%U = URL)"
-msgstr "Команда открытия (%U = URL)"
-
-msgid "Toggle popup shortcut"
-msgstr "Хоткей открытия меню"
-
-msgid "Set…"
-msgstr "Задать…"
-
-msgid "Rooms"
-msgstr "Комнаты"
-
-msgid "Add room"
-msgstr "Добавить комнату"
-
-msgid "(corrupt entry — edit via dconf)"
-msgstr "(повреждённая запись — отредактируйте через dconf)"
-
-msgid "(unnamed)"
-msgstr "(без имени)"
-
-msgid "Move up"
-msgstr "Поднять"
-
-msgid "Move down"
-msgstr "Опустить"
-
-msgid "Edit"
-msgstr "Редактировать"
-
-msgid "Delete"
-msgstr "Удалить"
-
-msgid "No rooms yet"
-msgstr "Комнат пока нет"
-
-msgid "Click + to add your first room"
-msgstr "Нажмите +, чтобы добавить первую комнату"
-
-msgid "Delete room?"
-msgstr "Удалить комнату?"
-
-msgid "Cancel"
-msgstr "Отмена"
-
-msgid "Edit room"
-msgstr "Редактировать комнату"
-
-msgid "Name"
-msgstr "Имя"
-
-msgid "URL"
-msgstr "Ссылка"
-
-msgid "Shortcut"
-msgstr "Хоткей"
-
-msgid "None"
-msgstr "Нет"
-
-msgid "Save"
-msgstr "Сохранить"
-
-msgid "Name is required"
-msgstr "Имя обязательно"
-
-msgid "Shortcut must include at least one modifier"
-msgstr "Хоткей должен содержать хотя бы один модификатор"
-
-msgid "Shortcut conflicts with the popup toggle shortcut"
-msgstr "Хоткей конфликтует с хоткеем открытия меню"
-
-msgid "Shortcut already used by \"%s\""
-msgstr "Хоткей уже используется в \"%s\""
-
-msgid "\"%s\" will be removed."
-msgstr "\"%s\" будет удалена."
-
-msgid "Hotkey %s already in use — \"%s\""
-msgstr "Хоткей %s уже занят — \"%s\""
-
+#: lib/launcher.js:29
+#, javascript-format
 msgid "Invalid URL for \"%s\": %s"
 msgstr "Некорректный URL для \"%s\": %s"
 
+#: lib/launcher.js:51
+#, javascript-format
 msgid "Failed to open \"%s\": %s"
 msgstr "Не удалось открыть \"%s\": %s"
 
+#: lib/rooms.js:24
 msgid "URL is empty"
 msgstr "URL пустой"
 
+#: lib/rooms.js:29
 msgid "Malformed URL"
 msgstr "Некорректный URL"
 
+#: lib/rooms.js:33
 msgid "Only http(s) URLs are supported"
 msgstr "Поддерживаются только http(s) URL"
 
+#: lib/rooms.js:35
 msgid "URL has no host"
 msgstr "В URL отсутствует хост"
+
+#: lib/indicator.js:44
+msgid "No rooms configured. Click to open preferences."
+msgstr "Комнаты не настроены. Откройте настройки."
+
+#: lib/indicator.js:56
+msgid "Preferences"
+msgstr "Настройки"
+
+#: lib/hotkeys.js:52
+msgid "Toggle popup"
+msgstr "Открытие меню"
+
+#: lib/hotkeys.js:97
+#, javascript-format
+msgid "Hotkey %s already in use — \"%s\""
+msgstr "Хоткей %s уже занят — \"%s\""
+
+#: prefs.js:16
+msgid "Disabled"
+msgstr "Отключено"
+
+#: prefs.js:27
+msgid "Press a shortcut"
+msgstr "Нажмите сочетание"
+
+#: prefs.js:30
+msgid "Press keys… Esc to clear, Backspace to cancel"
+msgstr "Нажмите клавиши… Esc — очистить, Backspace — отмена"
+
+#: prefs.js:76
+msgid "General"
+msgstr "Общие"
+
+#: prefs.js:79
+msgid "Open command (%U = URL)"
+msgstr "Команда открытия (%U = URL)"
+
+#: prefs.js:83
+msgid "Toggle popup shortcut"
+msgstr "Хоткей открытия меню"
+
+#: prefs.js:93 prefs.js:277
+msgid "Set…"
+msgstr "Задать…"
+
+#: prefs.js:108
+msgid "Rooms"
+msgstr "Комнаты"
+
+#: prefs.js:114 prefs.js:249
+msgid "Add room"
+msgstr "Добавить комнату"
+
+#: prefs.js:128
+msgid "(corrupt entry — edit via dconf)"
+msgstr "(повреждённая запись — отредактируйте через dconf)"
+
+#: prefs.js:138
+msgid "(unnamed)"
+msgstr "(без имени)"
+
+#: prefs.js:164
+msgid "Move up"
+msgstr "Поднять"
+
+#: prefs.js:174
+msgid "Move down"
+msgstr "Опустить"
+
+#: prefs.js:183
+msgid "Edit"
+msgstr "Редактировать"
+
+#: prefs.js:192 prefs.js:233
+msgid "Delete"
+msgstr "Удалить"
+
+#: prefs.js:203
+msgid "No rooms yet"
+msgstr "Комнат пока нет"
+
+#: prefs.js:204
+msgid "Click + to add your first room"
+msgstr "Нажмите +, чтобы добавить первую комнату"
+
+#: prefs.js:229
+msgid "Delete room?"
+msgstr "Удалить комнату?"
+
+#: prefs.js:230
+#, javascript-format
+msgid "\"%s\" will be removed."
+msgstr "\"%s\" будет удалена."
+
+#: prefs.js:232 prefs.js:298
+msgid "Cancel"
+msgstr "Отмена"
+
+#: prefs.js:249
+msgid "Edit room"
+msgstr "Редактировать комнату"
+
+#: prefs.js:263
+msgid "Name"
+msgstr "Имя"
+
+#: prefs.js:267
+msgid "URL"
+msgstr "Ссылка"
+
+#: prefs.js:271
+msgid "Shortcut"
+msgstr "Хоткей"
+
+#: prefs.js:274
+msgid "None"
+msgstr "Нет"
+
+#: prefs.js:303
+msgid "Save"
+msgstr "Сохранить"
+
+#: prefs.js:311
+msgid "Name is required"
+msgstr "Имя обязательно"
+
+#: prefs.js:317
+msgid "Shortcut must include at least one modifier"
+msgstr "Хоткей должен содержать хотя бы один модификатор"
+
+#: prefs.js:320
+msgid "Shortcut conflicts with the popup toggle shortcut"
+msgstr "Хоткей конфликтует с хоткеем открытия меню"
+
+#: prefs.js:323
+#, javascript-format
+msgid "Shortcut already used by \"%s\""
+msgstr "Хоткей уже используется в \"%s\""
