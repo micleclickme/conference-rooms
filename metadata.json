@@ -3,7 +3,7 @@
   "name": "Conference Rooms",
   "description": "Panel popup with a list of conference room links (Google Meet, Jitsi, incl. self-hosted). Click to open, button to copy URL.",
   "shell-version": ["46", "47", "48"],
-  "url": "https://github.com/mdanuschenkov/conference-rooms",
+  "url": "https://github.com/micleclickme/conference-rooms",
   "settings-schema": "org.gnome.shell.extensions.conference-rooms",
   "gettext-domain": "conference-rooms"
 }
