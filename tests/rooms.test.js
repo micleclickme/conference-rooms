@@ -33,6 +33,7 @@ describe('validateUrl', () => {
 
 describe('detectService', () => {
     it('detects Google Meet', () => { assertEqual(detectService('https://meet.google.com/abc-defg-hij'), 'meet'); });
+    it('detects Yandex Telemost', () => { assertEqual(detectService('https://telemost.yandex.ru/j/12345678901234'), 'telemost'); });
     it('detects jitsi by hostname substring', () => { assertEqual(detectService('https://meet.jit.si/standup'), 'jitsi'); });
     it('detects self-hosted jitsi hostname', () => { assertEqual(detectService('https://jitsi.example.com/room'), 'jitsi'); });
     it('detects single-segment self-hosted as jitsi', () => { assertEqual(detectService('https://call.example.com/standup'), 'jitsi'); });

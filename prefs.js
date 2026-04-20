@@ -144,6 +144,7 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
                     icon_name: ({
                         meet: 'google-meet-symbolic',
                         jitsi: 'jitsi-symbolic',
+                        telemost: 'telemost-symbolic',
                         generic: 'call-start-symbolic',
                     })[service],
                 }));
