@@ -65,6 +65,13 @@ function captureAccelerator(parentWindow) {
 export default class ConferenceRoomsPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         const settings = this.getSettings();
+
+        // Bundled SVGs under icons/ aren't in the default GTK icon theme —
+        // register them so `icon_name: '<service>-symbolic'` resolves.
+        const display = Gdk.Display.get_default();
+        if (display)
+            Gtk.IconTheme.get_for_display(display).add_search_path(this.path + '/icons');
+
         const page = new Adw.PreferencesPage();
         window.add(page);
 
@@ -142,7 +149,7 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
                 const service = detectService(room.url);
                 row.add_prefix(new Gtk.Image({
                     icon_name: ({
-                        meet: 'google-meet-symbolic',
+                        meet: 'meet-symbolic',
                         jitsi: 'jitsi-symbolic',
                         telemost: 'telemost-symbolic',
                         generic: 'call-start-symbolic',

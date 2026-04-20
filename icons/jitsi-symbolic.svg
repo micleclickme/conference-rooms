@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <circle cx="8" cy="8" r="5.5" fill="none" stroke="#eee" stroke-width="1.5"/>
-  <circle cx="8" cy="8" r="1.5" fill="#eee"/>
+  <path fill="#bebebe" d="M2.5 3a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 1.5 1.5H4v2l4-2h5.5a1.5 1.5 0 0 0 1.5-1.5v-5a1.5 1.5 0 0 0-1.5-1.5H2.5z"/>
 </svg>
