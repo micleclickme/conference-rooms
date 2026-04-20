@@ -37,6 +37,17 @@ make pack        # build EGO-upload zip
 
 Manual smoke checklist: `docs/smoke-test.md`.
 
+## Release
+
+Tag with a `v*` prefix and push:
+
+```bash
+git tag v1.0.0
+git push --tags
+```
+
+The `Build` workflow (`.github/workflows/build.yml`) runs tests, builds the EGO-ready zip, creates a GitHub Release named after the tag, and attaches the zip as a release asset. Every push to `main` and every PR also runs tests and uploads the zip as a build artifact (kept 30 days) for manual review.
+
 ## License
 
 GPL-3.0-or-later
