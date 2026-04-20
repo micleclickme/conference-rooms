@@ -1,0 +1,31 @@
+.conf-room-row {
+    spacing: 8px;
+    padding: 4px 8px;
+}
+
+.conf-room-icon {
+    icon-size: 16px;
+}
+
+.conf-room-name {
+    min-width: 180px;
+}
+
+.conf-room-accel {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
+    padding-right: 8px;
+}
+
+.conf-room-copy-button {
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.conf-room-copy-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.conf-room-copy-button-ok StIcon {
+    color: #4ade80;
+}
