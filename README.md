@@ -27,6 +27,10 @@ gnome-extensions enable conference-rooms@micleclickme.github.io
 
 ## Develop
 
+### Host
+
+Install `gjs`, `libglib2.0-bin`, `libglib2.0-dev-bin` (or equivalent), `gettext`, `make`, `zip`. Then:
+
 ```bash
 make test        # unit tests (pure modules only)
 make schemas     # compile GSettings schemas
@@ -34,6 +38,21 @@ make pot         # refresh translation template
 make mo          # compile .po files
 make pack        # build EGO-upload zip
 ```
+
+### Docker (isolated build env)
+
+No host install needed — `docker` + `docker compose` are enough. Node.js is **not** required (tests run under `gjs`).
+
+```bash
+make docker-build  # one-time image build
+make docker-test   # run unit tests in container
+make docker-pack   # build the release zip in container
+make docker-shell  # drop into a dev shell
+```
+
+The container UID/GID match your host user, so files written to the mounted workspace stay yours. `.devcontainer/devcontainer.json` is provided for VS Code / Cursor "Reopen in Container".
+
+**Limitation:** the container cannot install or smoke-test the extension — that needs a live GNOME Shell session on the host. Use `make install` on the host after the container produces `schemas/gschemas.compiled` and `locale/`.
 
 Manual smoke checklist: `docs/smoke-test.md`.
 

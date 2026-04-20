@@ -6,7 +6,9 @@ SCHEMA_FILES := $(wildcard schemas/*.gschema.xml)
 PO_FILES := $(wildcard po/*.po)
 MO_FILES := $(patsubst po/%.po,locale/%/LC_MESSAGES/conference-rooms.mo,$(PO_FILES))
 
-.PHONY: all schemas pot mo test install uninstall pack clean
+.PHONY: all schemas pot mo test install uninstall pack clean docker-build docker-test docker-pack docker-shell
+
+DOCKER_COMPOSE := UID=$(shell id -u) GID=$(shell id -g) docker compose
 
 all: schemas mo
 
@@ -48,3 +50,17 @@ clean:
 	rm -f schemas/gschemas.compiled
 	rm -rf locale
 	rm -f *.zip
+
+# Docker dev environment — isolates gjs/glib/gettext without host installs.
+# Host still needs GNOME Shell to actually install and smoke-test the extension.
+docker-build:
+	$(DOCKER_COMPOSE) build
+
+docker-test:
+	$(DOCKER_COMPOSE) run --rm dev make test
+
+docker-pack:
+	$(DOCKER_COMPOSE) run --rm dev make pack
+
+docker-shell:
+	$(DOCKER_COMPOSE) run --rm dev
