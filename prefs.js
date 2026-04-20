@@ -292,7 +292,6 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
             visible: false,
             margin_start: 12, margin_end: 12, margin_bottom: 8,
         });
-        content.set_content_bottom_bar = errorLabel;
         group.add(errorLabel);
 
         const cancel = new Gtk.Button({ label: _('Cancel') });
