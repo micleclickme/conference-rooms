@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 import Gio from 'gi://Gio';
 
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -12,6 +13,7 @@ export default class ConferenceRoomsExtension extends Extension {
     enable() {
         this.initTranslations();
         const _ = this.gettext.bind(this);
+        const notify = text => Main.notify('Conference Rooms', text);
 
         this._settings = this.getSettings();
 
@@ -23,7 +25,8 @@ export default class ConferenceRoomsExtension extends Extension {
         };
 
         const openRoom = room => {
-            Launcher.open(room, this._settings.get_string('open-command'), { gettext: _ });
+            Launcher.open(room, this._settings.get_string('open-command'),
+                { notify, gettext: _ });
         };
 
         const openRoomById = id => {
@@ -43,6 +46,7 @@ export default class ConferenceRoomsExtension extends Extension {
 
         this._hotkeys = new HotkeyManager({
             settings: this._settings,
+            notify,
             onTogglePopup: () => this._indicator.menu.toggle(),
             onOpenRoomById: openRoomById,
             gettext: _,

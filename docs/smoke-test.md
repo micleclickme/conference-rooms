@@ -3,7 +3,7 @@
 Run on a GNOME 46+ session before every release.
 
 1. `make clean && make all && make install`
-2. Restart Shell (X11: Alt+F2 → `r`; Wayland: log out/in). Run `gnome-extensions enable conference-rooms@mdanuschenkov`.
+2. Restart Shell (X11: Alt+F2 → `r`; Wayland: log out/in). Run `gnome-extensions enable conference-rooms@micleclickme.github.io`.
 3. Panel shows the phone icon. Click → popup shows "No rooms configured".
 4. Open prefs, add a Google Meet room. Popup updates without restart.
 5. Click the room in the popup. Browser opens to the correct URL.

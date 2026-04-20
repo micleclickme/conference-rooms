@@ -15,10 +15,7 @@
     <key name="popup-hotkey" type="as">
       <default><![CDATA[['<Super>m']]]></default>
       <summary>Hotkey to toggle the popup menu</summary>
-    </key>
-    <key name="schema-version" type="i">
-      <default>1</default>
-      <summary>Reserved for future migrations</summary>
+      <description>GTK accelerator string that shows and hides the Conference Rooms panel menu. Empty array disables the global shortcut.</description>
     </key>
   </schema>
 </schemalist>

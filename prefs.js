@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 import Adw from 'gi://Adw';
 import Gdk from 'gi://Gdk';
 import Gio from 'gi://Gio';
@@ -226,7 +227,7 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
     _deleteRoom(window, settings, room) {
         const dialog = new Adw.AlertDialog({
             heading: _('Delete room?'),
-            body: _(`"${room.name}" will be removed.`),
+            body: _('"%s" will be removed.').replace('%s', room.name),
         });
         dialog.add_response('cancel', _('Cancel'));
         dialog.add_response('delete', _('Delete'));
@@ -310,7 +311,7 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
             if (!name) return _('Name is required');
             const canonical = canonicalizeUrl(rawUrl);
             const urlCheck = validateUrl(canonical);
-            if (!urlCheck.ok) return urlCheck.reason;
+            if (!urlCheck.ok) return _(urlCheck.reason);
             if (currentHotkey) {
                 const hasMod = /<(Super|Control|Ctrl|Alt|Shift)>/.test(currentHotkey);
                 if (!hasMod) return _('Shortcut must include at least one modifier');
@@ -319,7 +320,7 @@ export default class ConferenceRoomsPreferences extends ExtensionPreferences {
                     return _('Shortcut conflicts with the popup toggle shortcut');
                 const collision = rooms.find(r =>
                     r.hotkey === currentHotkey && (!existing || r.id !== existing.id));
-                if (collision) return _(`Shortcut already used by "${collision.name}"`);
+                if (collision) return _('Shortcut already used by "%s"').replace('%s', collision.name);
             }
             return null;
         };

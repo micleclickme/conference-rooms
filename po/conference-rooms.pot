@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Conference Rooms\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-20 15:18+0300\n"
+"POT-Creation-Date: 2026-04-20 15:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: lib/launcher.js:32
+#, javascript-format
+msgid "Invalid URL for \"%s\": %s"
+msgstr ""
+
+#: lib/launcher.js:54
+#, javascript-format
+msgid "Failed to open \"%s\": %s"
+msgstr ""
 
 #: lib/indicator.js:44
 msgid "No rooms configured. Click to open preferences."
@@ -25,103 +35,113 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: lib/hotkeys.js:48
+#: lib/hotkeys.js:54
 msgid "Toggle popup"
 msgstr ""
 
-#: prefs.js:15
+#: lib/hotkeys.js:99
+#, javascript-format
+msgid "Hotkey %s already in use — \"%s\""
+msgstr ""
+
+#: prefs.js:16
 msgid "Disabled"
 msgstr ""
 
-#: prefs.js:26
+#: prefs.js:27
 msgid "Press a shortcut"
 msgstr ""
 
-#: prefs.js:29
+#: prefs.js:30
 msgid "Press keys… Esc to clear, Backspace to cancel"
 msgstr ""
 
-#: prefs.js:75
+#: prefs.js:76
 msgid "General"
 msgstr ""
 
-#: prefs.js:78
+#: prefs.js:79
 msgid "Open command (%U = URL)"
 msgstr ""
 
-#: prefs.js:82
+#: prefs.js:83
 msgid "Toggle popup shortcut"
 msgstr ""
 
-#: prefs.js:92 prefs.js:276
+#: prefs.js:93 prefs.js:277
 msgid "Set…"
 msgstr ""
 
-#: prefs.js:107
+#: prefs.js:108
 msgid "Rooms"
 msgstr ""
 
-#: prefs.js:113 prefs.js:248
+#: prefs.js:114 prefs.js:249
 msgid "Add room"
 msgstr ""
 
-#: prefs.js:127
+#: prefs.js:128
 msgid "(corrupt entry — edit via dconf)"
 msgstr ""
 
-#: prefs.js:137
+#: prefs.js:138
 msgid "(unnamed)"
 msgstr ""
 
-#: prefs.js:163
+#: prefs.js:164
 msgid "Move up"
 msgstr ""
 
-#: prefs.js:173
+#: prefs.js:174
 msgid "Move down"
 msgstr ""
 
-#: prefs.js:182
+#: prefs.js:183
 msgid "Edit"
 msgstr ""
 
-#: prefs.js:191 prefs.js:232
+#: prefs.js:192 prefs.js:233
 msgid "Delete"
 msgstr ""
 
-#: prefs.js:202
+#: prefs.js:203
 msgid "No rooms yet"
 msgstr ""
 
-#: prefs.js:203
+#: prefs.js:204
 msgid "Click + to add your first room"
 msgstr ""
 
-#: prefs.js:228
+#: prefs.js:229
 msgid "Delete room?"
 msgstr ""
 
-#: prefs.js:231 prefs.js:298
+#: prefs.js:230
+#, javascript-format
+msgid "\"%s\" will be removed."
+msgstr ""
+
+#: prefs.js:232 prefs.js:298
 msgid "Cancel"
 msgstr ""
 
-#: prefs.js:248
+#: prefs.js:249
 msgid "Edit room"
 msgstr ""
 
-#: prefs.js:262
+#: prefs.js:263
 msgid "Name"
 msgstr ""
 
-#: prefs.js:266
+#: prefs.js:267
 msgid "URL"
 msgstr ""
 
-#: prefs.js:270
+#: prefs.js:271
 msgid "Shortcut"
 msgstr ""
 
-#: prefs.js:273
+#: prefs.js:274
 msgid "None"
 msgstr ""
 
@@ -142,37 +162,6 @@ msgid "Shortcut conflicts with the popup toggle shortcut"
 msgstr ""
 
 #: prefs.js:323
-msgid "Shortcut already used by \"${collision.name}\""
-msgstr ""
-
-#: prefs.js:229
-msgid "\"${room.name}\" will be removed."
-msgstr ""
-
-#: lib/hotkeys.js:95
-msgid "Hotkey ${accel} already in use — \"${name}\""
-msgstr ""
-
-#: lib/launcher.js:34
-msgid "Invalid URL for \"${room.name}\": ${check.reason}"
-msgstr ""
-
-#: lib/launcher.js:55
-msgid "Failed to open \"${room.name}\": ${e.message}"
-msgstr ""
-
-#: lib/rooms.js:21
-msgid "URL is empty"
-msgstr ""
-
-#: lib/rooms.js:26
-msgid "Malformed URL"
-msgstr ""
-
-#: lib/rooms.js:30
-msgid "Only http(s) URLs are supported"
-msgstr ""
-
-#: lib/rooms.js:32
-msgid "URL has no host"
+#, javascript-format
+msgid "Shortcut already used by \"%s\""
 msgstr ""

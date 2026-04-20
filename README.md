@@ -13,13 +13,13 @@ GNOME Shell extension: a panel popup with a list of conference room links (Googl
 git clone <repo>
 cd conference-rooms
 make install
-gnome-extensions enable conference-rooms@mdanuschenkov
+gnome-extensions enable conference-rooms@micleclickme.github.io
 # Restart Shell: Alt+F2 → r (X11) or log out/in (Wayland)
 ```
 
 ## Configure
 
-`gnome-extensions prefs conference-rooms@mdanuschenkov`
+`gnome-extensions prefs conference-rooms@micleclickme.github.io`
 
 - **Open command**: e.g. `firefox --new-window %U`, `chromium --app=%U`, `xdg-open %U`. `%U` is replaced with the URL; if the token is absent, the URL is appended.
 - **Toggle popup shortcut**: default `<Super>M`.

@@ -1,5 +1,5 @@
 {
-  "uuid": "conference-rooms@mdanuschenkov",
+  "uuid": "conference-rooms@micleclickme.github.io",
   "name": "Conference Rooms",
   "description": "Panel popup with a list of conference room links (Google Meet, Jitsi, incl. self-hosted). Click to open, button to copy URL.",
   "shell-version": ["46", "47", "48"],

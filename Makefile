@@ -1,4 +1,4 @@
-UUID := conference-rooms@mdanuschenkov
+UUID := conference-rooms@micleclickme.github.io
 INSTALL_DIR := $(HOME)/.local/share/gnome-shell/extensions/$(UUID)
 SHELL := /bin/bash
 
@@ -38,6 +38,7 @@ uninstall:
 	rm -rf "$(INSTALL_DIR)"
 
 pack: all
+	@test -d locale || { echo "locale/ missing — run 'make mo' first"; exit 1; }
 	rm -f $(UUID).shell-extension.zip
 	cd . && zip -r $(UUID).shell-extension.zip \
 		metadata.json extension.js prefs.js stylesheet.css \
