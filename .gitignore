@@ -1,0 +1,6 @@
+schemas/gschemas.compiled
+locale/
+*.mo
+*.zip
+node_modules/
+.DS_Store
